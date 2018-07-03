@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+    {% if test_name == "python" %}
+        这是python页面噢噢噢噢
+    {% elif test_name == "django"%}
+        这是django的页面哈哈哈哈
+    {% else %}
+        哈哈哈 是{{ test_name }}的呢....
+    {% endif %}
+
+
+    <br>
+# for的使用
+{% for i in list %}
+    {% if forloop.counter0 == 0 %}
+        <li>这是一个值：{{ i }}</li>
+    {% else %}
+           <li>{{ i }}</li>
+    {% endif %}
+{% endfor %}
+
+    <br>
+
+    <a href="/books/test">test测试</a> <br>
+    <a href={% url 'test' %}> test 页面</a> <br>
+    <a href="{% url 'books_new' 'django' %}">new传参数</a>  <br>
+
+
+    <br>
+{% with test_name as tn  %}
+    11111{{ tn }} <br>
+    22222 {{ tn }} <br>
+{% endwith %}
+
+
+# autoescape的使用
+原始的: {{ html }} <br>
+过滤器方式: {{ html |safe }} <br>
+标签方式:
+{% autoescape off %}
+    {{ html }} <br>
+{% endautoescape %}
+</body>
+</html>

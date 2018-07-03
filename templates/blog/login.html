@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <form method="post" >
+        {% csrf_token %}
+        <input type="text" name="username111" placeholder="请输入密码" />
+        <input type="password"  name="password" placeholder="请输入密码" />
+{#        也可以用下面这句，效果等同于上面两句#}
+{#        {{form.as_p}}#}
+
+        <input type="submit" value="登录"/>
+        {{ error }}
+    </form>
+</body>
+</html>

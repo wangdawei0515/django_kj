@@ -1,0 +1,44 @@
+{% load static %}
+{% load common_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态文件加载</title>
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+<script src="{% static 'js/myjs.js' %}"></script>
+图片：
+<img src="{% static 'image/myimage.jpg' %}" alt="">
+
+<br>
+{# 自定义模板过滤器 #}
+{{ ss | cut:" "  }}
+<br>
+{{ ss | mycut:" " }}
+
+
+
+{# 自定义模板标签#}
+<br>
+{% current_time  format_string %}
+<br>
+{% current_time_2  %}
+<br>
+{% current_time '%Y-%m-%d %H:%M:%P'%}
+<br>
+
+
+{#包含标签#}
+{% show_results %}
+
+
+{# 分配标签#}
+<br>
+{% current_time_3 '%Y-%m-%d %H:%M:%P' as ctime %}
+The time is {{ ctime }}
+<br>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+{% extends 'music/base.html' %}
+{% block title %}music主页{% endblock %}
+{% block content %}
+    这句是通过block.super继承父类的：{{ block.super }}<br>
+    这是子模板自己的内容：没有写block就不会显示
+{% endblock %}
+{% block demo %}
+    这是通过include引用的其他模板的内容：{% include 'music/ss.html' %}
+{% endblock %}

@@ -1,0 +1,6 @@
+echo "# django_kj" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/wangdawei0515/django_kj.git
+git push -u origin master

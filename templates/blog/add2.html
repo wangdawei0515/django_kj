@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add_form</title>
+</head>
+<body>
+    <form method="post" >
+    {% csrf_token %}
+
+{#        as.p表示不让两个输入框在同一行显示就是html中的p标签#}
+{#    {{ form.as_p }}#}
+
+{#        或者使用这种方式也可以#}
+        <br>
+        first: {{ form.first }}
+        <br>
+        <br>
+        second:  {{ form.second }}
+        <br>
+
+    <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

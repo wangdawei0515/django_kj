@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+欢迎  {{ username }} <br>
+<a href="{% url 'blog_login' %}">登录</a>
+<a href="{% url 'blog_register' %}">注册</a>
+<a href="{% url 'blog_logout' %}">退出</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    这个变量是字符串对象：{{ books_name}}<br>
+    这个变量是函数对象：{{ hello}}<br>
+    这个变量是类方法对象：{{ fruits_say}}<br>
+    这个变量是类对象：{{ fruits}}<br>
+    这个变量是类对象，访问类对象的属性：{{ fruits.name}}<br>
+    这个变量是类对象，访问类对象的方法：{{ fruits.say}}<br>
+    这个变量是列表对象{{ list }}<br>
+    这个变量是列表对象,访问列表的元素{{ list.1 }}<br>
+    这个变量是字典对象{{ dict }}<br>
+    这个变量是字典对象,访问字典的键{{ dict.a }}<br>
+    这里是html文件中，模板渲染时url中传参方式，你好{{ zheli }} 变量名要和views文件中index_4函数中的zheli一致 {# 浏览器中输入的url：http://106.14.163.146:8000/books/wangdw/ #}
+</body>
+</html>
